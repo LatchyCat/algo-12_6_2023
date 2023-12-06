@@ -31,9 +31,10 @@ function indexOf(items, searchItem) {
     // code here
     for (let i = 0; i < items.length; i++) {
         if (items[i] === searchItem) {
-            return items[i]
+            return i
         }
     }
+    return -1
 }
 
 // Tests
@@ -90,7 +91,23 @@ const expected5 = null;
 */
 function nthLast(items, nthToLast) {
     // code here
-}
+    if (nthToLast < 1 || items.length === 0) {
+        return null;
+    }
+
+    for (let i = items.length - 1; i >= 0; i--) {
+        if (nthToLast === 1) {
+            return items[i];
+        }
+            nthToLast--
+        // if (nthToLast === 1) return items[i]
+        // if (nthToLast === 2) return items[i -1]
+        // if (nthToLast === 0) return null
+        // if (nthToLast === -1) return null
+        // if (items.length === 0 || nthToLast === 2) return null
+    };
+
+};
 
 // Tests
 console.log("\n************Algo #2***********")
