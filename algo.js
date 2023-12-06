@@ -29,6 +29,11 @@ const expectedD = -1;
  */
 function indexOf(items, searchItem) {
     // code here
+    for (let i = 0; i < items.length; i++) {
+        if (items[i] === searchItem) {
+            return items[i]
+        }
+    }
 }
 
 // Tests
